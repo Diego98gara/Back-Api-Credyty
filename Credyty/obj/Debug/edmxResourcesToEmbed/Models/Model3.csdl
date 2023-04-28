@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDparqueaderoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BDparqueaderoEntities1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_getVehiculosByRangoHorario" ReturnType="Collection(BDparqueaderoModel.sp_getVehiculosByRangoHorario_Result)">
+      <Parameter Name="horaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="horaFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_getVehiculosByRangoHorario_Result">
+    <Property Type="Int32" Name="idVehiculo" Nullable="false" />
+    <Property Type="String" Name="tipoVehiculo" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="placa" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="horaIngreso" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="horaSalida" Nullable="false" Precision="23" />
+    <Property Type="String" Name="numeroFactura" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="valorPagado" Nullable="false" MaxLength="150" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDparqueaderoModelStoreContainer" CdmEntityContainer="BDparqueaderoEntities1">
+    <FunctionImportMapping FunctionImportName="sp_getVehiculosByRangoHorario" FunctionName="BDparqueaderoModel.Store.sp_getVehiculosByRangoHorario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BDparqueaderoModel.sp_getVehiculosByRangoHorario_Result">
+          <ScalarProperty Name="idVehiculo" ColumnName="idVehiculo" />
+          <ScalarProperty Name="tipoVehiculo" ColumnName="tipoVehiculo" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="horaIngreso" ColumnName="horaIngreso" />
+          <ScalarProperty Name="horaSalida" ColumnName="horaSalida" />
+          <ScalarProperty Name="numeroFactura" ColumnName="numeroFactura" />
+          <ScalarProperty Name="valorPagado" ColumnName="valorPagado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
